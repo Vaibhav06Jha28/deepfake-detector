@@ -114,10 +114,22 @@ Visit [http://localhost:80](http://localhost:80) to use the app.
 ---
 
 ## 🖼️ Demo Screenshot
+### 🔍 Homepage
 
-<p align="center">
-  <img src="https://github.com/Vaibhav06Jha28/deepfake-detector/blob/main/static/images/demo.png" width="80%" />
-</p>
+![Homepage](https://raw.githubusercontent.com/Vaibhav06Jha28/deepfake-detector/main/assets/screenshots/Screenshot%202025-07-04%20185950.png)
+
+### 📤 Upload Page
+
+![Upload](https://raw.githubusercontent.com/Vaibhav06Jha28/deepfake-detector/main/assets/screenshots/Screenshot%202025-07-04%20190035.png)
+
+### 🔥 Heatmap Visualization
+
+![Result](https://raw.githubusercontent.com/Vaibhav06Jha28/deepfake-detector/main/assets/screenshots/Screenshot%202025-07-04%20190621.png)
+
+### 🧠 Prediction Result 
+
+![Heatmap](https://raw.githubusercontent.com/Vaibhav06Jha28/deepfake-detector/main/assets/screenshots/Screenshot%202025-07-04%20190724.png)
+
 
 ---
 
