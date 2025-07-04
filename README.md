@@ -58,7 +58,7 @@ We trained the model on the **DFDC dataset** (Deepfake Detection Challenge), usi
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/vaibhavjha01/deepfake-detector.git
+git clone https://github.com/Vaibhav06Jha28/deepfake-detector.git
 cd deepfake-detector
 ```
 
