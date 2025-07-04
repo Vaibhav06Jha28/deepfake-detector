@@ -1,0 +1,41 @@
+
+.vs
+.vscode
+models/*
+!models/Readme.txt
+uploaded_images/*
+!uploaded_images/Readme.txt
+uploaded_videos/*
+!uploaded_videos/Readme.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django
+db.sqlite3
+*.log
+staticfiles/
+media/
+*.pot
+*.pyc
+*.pyo
+.env
+
+# Environments
+venv/
+env/
+
+# VS Code / PyCharm
+.vscode/
+.idea/
+
+# Byte-compiled / cache
+*.egg-info/
+.eggs/
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db

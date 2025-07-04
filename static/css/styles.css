@@ -1,0 +1,112 @@
+/* Global layout & fallback */
+body {
+    height: 100%;
+    padding-top: 70px; /* space for fixed navbar */
+    background-color: #000; /* fallback if image fails */
+    color: white;
+}
+
+/* Background image */
+.bg {
+    background-image: url("/static/images/background3.png?v=2");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Text visibility + contrast */
+h1, h2, h3, h4, h5, h6,
+label, span, p, .form-label {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Form field styling */
+input[type="file"],
+input[type="text"],
+input[type="range"],
+button,
+.upload-btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+}
+
+button {
+    font-weight: bold;
+}
+
+/* Form layout boxes */
+.width-300,
+.width-400,
+.width-500 {
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0px 9px 2px #ccc;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+}
+
+.width-300 { width: 300px; }
+.width-400 {
+    width: 400px;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+.width-500 { width: 500px; }
+
+/* Preprocessing / gallery display */
+#videos {
+    display: none;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.preprocess, .faces, .heat-map {
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+#preprocessed_images,
+#faces_images,
+#heatmap_images {
+    white-space: nowrap;
+    width: auto;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-shadow: 0 0px 9px 2px #ccc;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#preprocessed_images { height: 250px; }
+#faces_images       { height: 150px; }
+#heatmap_images     { height: 200px; }
+
+/* Optional: Hide loading spinner */
+/* span.spinner-border { display: none; } */
+
+/* 🌟 Navbar enhancements */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(6px);
+}
+
+/* Active nav highlight */
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 2px solid #28a745;
+}
+
+/* Hover effect on nav links */
+.navbar-nav .nav-link:hover {
+    color: #28a745 !important;
+}
