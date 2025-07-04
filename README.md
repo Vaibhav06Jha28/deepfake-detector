@@ -116,7 +116,7 @@ Visit [http://localhost:80](http://localhost:80) to use the app.
 ## 🖼️ Demo Screenshot
 
 <p align="center">
-  <img src="https://github.com/vaibhavjha01/deepfake-detector/blob/main/static/images/demo.png" width="80%" />
+  <img src="https://github.com/Vaibhav06Jha28/deepfake-detector/blob/main/static/images/demo.png" width="80%" />
 </p>
 
 ---
@@ -147,19 +147,10 @@ Visit [http://localhost:80](http://localhost:80) to use the app.
 ## 🧑‍💻 Developed By
 
 **Vaibhav Jha**  
-Connect with me on [LinkedIn](https://linkedin.com/in/vaibhav-jha01) | Star this repo ⭐ if it helped you!
+Connect with me on [https://www.linkedin.com/in/vaibhav-jha-27191b1ba/ ]| Star this repo ⭐ if it helped you!
 
 ---
 
-## ☕ Support
-
-If you find this useful, consider buying me a coffee:
-
-<a href="https://www.buymeacoffee.com/vaibhavjha" target="_blank">
-  <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" height="40px" />
-</a>
-
----
 
 ## 📄 License
 
