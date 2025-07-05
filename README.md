@@ -53,6 +53,25 @@ A two-layer bidirectional **LSTM** learns temporal patterns from sequences of fa
 We trained the model on the **DFDC dataset** (Deepfake Detection Challenge), using extracted face crops via MTCNN and saved into frame sequences for each video.
 
 ---
+## 🧠 Tech Stack & Tools Used
+
+| Layer         | Technology / Tool                  | Badge |
+|---------------|------------------------------------|-------|
+| **Backend**   | Python                             | ![Python](https://img.shields.io/badge/Python-3.8-blue?logo=python&logoColor=white) |
+|               | Django                             | ![Django](https://img.shields.io/badge/Django-4.2-green?logo=django&logoColor=white) |
+| **Deep Learning** | PyTorch                        | ![PyTorch](https://img.shields.io/badge/PyTorch-ResNeXt--50--LSTM-EE4C2C?logo=pytorch&logoColor=white) |
+|               | ResNeXt-50                         | ![Model](https://img.shields.io/badge/Model-ResNeXt50-orange) |
+|               | LSTM                               | ![Model](https://img.shields.io/badge/RNN-LSTM-red) |
+| **Frontend**  | HTML                               | ![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) |
+|               | Bootstrap                          | ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-blueviolet?logo=bootstrap&logoColor=white) |
+|               | JavaScript                         | ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) |
+|               | face-api.js                        | ![face-api.js](https://img.shields.io/badge/face--api.js-FACE-lightgrey) |
+| **Deployment**| Docker                             | ![Docker](https://img.shields.io/badge/Docker-Container-blue?logo=docker&logoColor=white) |
+|               | Nginx                              | ![Nginx](https://img.shields.io/badge/Nginx-ReverseProxy-009639?logo=nginx&logoColor=white) |
+|               | NVIDIA CUDA                        | ![CUDA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?logo=nvidia&logoColor=white) |
+
+
+---
 
 ## 🚀 Installation & Local Setup
 
@@ -112,7 +131,26 @@ docker run -p 80:80 --volumes-from deepfake_app   -v static_volume:/home/app/sta
 Visit [http://localhost:80](http://localhost:80) to use the app.
 
 ---
+## 🔗 Project Demonstration
 
+🎥 **Full Inference Demo (With GPU Support)**  
+Watch the complete working of the Deepfake Detection system using the GPU backend:  
+👉 [Watch on Google Drive](https://drive.google.com/file/d/1gPLIKDBInV9DT4SgsNHcZjLfEp1OGeLW/view?usp=sharing)
+
+---
+
+
+🚀 **Live UI Demo (Frontend only)**  
+Coming Soon on Render (UI without GPU inference)
+
+---
+
+
+📂 **Source Code**  
+Check out the complete source here:  
+👉 [GitHub Repo](https://github.com/Vaibhav06Jha28/deepfake-detector)
+
+---
 ## 🖼️ Demo Screenshot
 ### 🔍 Homepage
 
@@ -134,18 +172,6 @@ Visit [http://localhost:80](http://localhost:80) to use the app.
 ---
 
 
----
-
-## 📦 Tech Stack
-
-| Layer         | Tech                                 |
-|---------------|--------------------------------------|
-| Backend       | Python, Django                       |
-| Deep Learning | PyTorch, ResNeXt-50, LSTM            |
-| Frontend      | HTML, Bootstrap, JS, face-api.js     |
-| Deployment    | Docker, Nginx, NVIDIA CUDA           |
-
----
 
 ## ✨ Future Improvements
 
@@ -155,38 +181,8 @@ Visit [http://localhost:80](http://localhost:80) to use the app.
 - ☁️ Cloud inference API (AWS / GCP)
 
 ---
-## 🔗 Project Demonstration
-
-🎥 **Full Inference Demo (With GPU Support)**  
-Watch the complete working of the Deepfake Detection system using the GPU backend:  
-👉 [Watch on Google Drive](https://drive.google.com/file/d/1gPLIKDBInV9DT4SgsNHcZjLfEp1OGeLW/view?usp=sharing)
-
----
 
 
-🚀 **Live UI Demo (Frontend only)**  
-Coming Soon on Render (UI without GPU inference)
-
----
-
-
-📂 **Source Code**  
-Check out the complete source here:  
-👉 [GitHub Repo](https://github.com/Vaibhav06Jha28/deepfake-detector)
-
----
-
-
-## 📊 Tech Stack
-
-![Python](https://img.shields.io/badge/Python-3.8-blue.svg)
-![Django](https://img.shields.io/badge/Django-4.2-green)
-![Status](https://img.shields.io/badge/Deployment-Demo%20UI%20Only-yellow)
-![License](https://img.shields.io/github/license/Vaibhav06Jha28/deepfake-detector)
-![Last Commit](https://img.shields.io/github/last-commit/Vaibhav06Jha28/deepfake-detector)
-
-
----
 ## 🧑‍💻 Developed By
 
 **Vaibhav Jha**  
