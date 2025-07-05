@@ -1,5 +1,29 @@
-templates/* linguist-vendored
-static/* linguist-vendored
-assets/* linguist-vendored
-*.html linguist-vendored
-*.css linguist-vendored
+# Ensure consistent LF line endings for code files
+*.py     text eol=lf
+*.html   text eol=lf
+*.css    text eol=lf
+*.js     text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.sh     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+
+# Handle binary files properly
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.mp4    binary
+*.webm   binary
+*.avi    binary
+
+# Notebook settings if you have any Jupyter notebooks later
+*.ipynb  text
+
+# Make shell scripts executable on checkout (optional)
+*.sh     text eol=lf
+
+# Linguist override if needed (optional)
+*.py linguist-language=Python
+*.html linguist-language=HTML
