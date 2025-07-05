@@ -1,22 +1,44 @@
-#pull the nvidia cuda GPU docker image
-FROM nvidia/cuda
+# 1. Use NVIDIA CUDA base image with Python 3 support
+FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu20.04
 
-#pull python 3.6.8 docker image
-FROM python:3.6.8
+# 2. Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-#create a directory to serve static files 
-RUN mkdir -p /home/app/staticfiles/app/uploaded_videos/
-WORKDIR /app
-COPY ./requirements.txt /app/requirements.txt
-RUN python -m pip install --upgrade pip
-RUN pip install cmake
-RUN pip install opencv-python==4.2.0.32
-RUN pip install -r requirements.txt
-COPY . /app
-RUN python manage.py collectstatic --noinput
-RUN pip install gunicorn
-RUN mkdir -p /app/uploaded_videos/app/uploaded_videos/
 
-VOLUME /app/run/
+# 3. Set working directory
+WORKDIR /app
+
+# 4. Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    python3-dev \
+    build-essential \
+    cmake \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    git \
+    && apt-get clean
+
+# 5. Copy and install Python dependencies
+COPY ./requirements.txt /app/requirements.txt
+RUN pip3 install --upgrade pip
+RUN pip3 install -r /app/requirements.txt
+
+# 6. Copy project files
+COPY . /app
+
+# 7. Ensure gunicorn script is executable
+RUN chmod +x /app/bin/gunicorn_start.sh
+
+# 8. Ensure required folders exist (optional)
+RUN mkdir -p /app/run /app/uploaded_videos /app/uploaded_images /app/models
+
+# 9. Collect static files
+RUN python3 manage.py collectstatic --noinput
+
+# 10. Expose port (optional, if you decide to use TCP socket instead of Unix socket)
+# EXPOSE 8000
+
+# 11. Define default command to run app
 ENTRYPOINT ["/app/bin/gunicorn_start.sh"]

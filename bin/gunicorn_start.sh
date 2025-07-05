@@ -1,17 +1,25 @@
 #!/bin/bash
 
-NAME="project_settings"                                  # Name of the application
-DJANGODIR=/app             # Django project directory
-SOCKFILE=/app/run/gunicorn.sock  # we will communicte using this unix socket
-NUM_WORKERS=3                                     # how many worker processes should Gunicorn spawn
-DJANGO_SETTINGS_MODULE=project_settings.settings             # which settings file should Django use
-DJANGO_WSGI_MODULE=project_settings.wsgi                     # WSGI module name
+# ------------------ Configuration ------------------
+NAME="deepfake_detector_app"                             # App name
+DJANGODIR=/app                                            # Django app directory
+SOCKFILE=/app/run/gunicorn.sock                          # Unix socket for communication
+NUM_WORKERS=3                                             # Worker processes
+DJANGO_SETTINGS_MODULE=project_settings.settings         # Settings module
+DJANGO_WSGI_MODULE=project_settings.wsgi                 # WSGI entry point
 
+# ------------------ Startup Log ---------------------
 echo "Starting $NAME as `whoami`"
 
-# Create the run directory if it doesn't exist
+# ------------------ Ensure Socket Directory Exists ---
 RUNDIR=$(dirname $SOCKFILE)
-test -d $RUNDIR || mkdir -p $RUNDIR
+mkdir -p $RUNDIR
 
-# Start your Django Gunicorn
- gunicorn project_settings.wsgi:application --bind=unix:$SOCKFILE --workers $NUM_WORKERS --timeout 600
+# ------------------ Start Gunicorn ------------------
+exec gunicorn ${DJANGO_WSGI_MODULE}:application \
+  --name $NAME \
+  --workers $NUM_WORKERS \
+  --timeout 600 \
+  --bind unix:$SOCKFILE \
+  --log-level=info \
+  --log-file=-
