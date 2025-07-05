@@ -155,7 +155,38 @@ Visit [http://localhost:80](http://localhost:80) to use the app.
 - ☁️ Cloud inference API (AWS / GCP)
 
 ---
+## 🔗 Project Demonstration
 
+🎥 **Full Inference Demo (With GPU Support)**  
+Watch the complete working of the Deepfake Detection system using the GPU backend:  
+👉 [Watch on Google Drive](https://drive.google.com/file/d/1gPLIKDBInV9DT4SgsNHcZjLfEp1OGeLW/view?usp=sharing)
+
+---
+
+
+🚀 **Live UI Demo (Frontend only)**  
+Coming Soon on Render (UI without GPU inference)
+
+---
+
+
+📂 **Source Code**  
+Check out the complete source here:  
+👉 [GitHub Repo](https://github.com/Vaibhav06Jha28/deepfake-detector)
+
+---
+
+
+## 📊 Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3.8-blue.svg)
+![Django](https://img.shields.io/badge/Django-4.2-green)
+![Status](https://img.shields.io/badge/Deployment-Demo%20UI%20Only-yellow)
+![License](https://img.shields.io/github/license/Vaibhav06Jha28/deepfake-detector)
+![Last Commit](https://img.shields.io/github/last-commit/Vaibhav06Jha28/deepfake-detector)
+
+
+---
 ## 🧑‍💻 Developed By
 
 **Vaibhav Jha**  
